@@ -14,10 +14,12 @@ fi
 
 # Run pywal with the provided image path
 wal -n -i "$1"
-exec ~/.config/waybar/waybar.sh &
+#exec ~/.config/waybar/waybar.sh &
 pywalfox update
 swww img --transition-type random --transition-step 255 --transition-fps 60 $1
 
+# Set hyprlock
+cp $1 ~/.config/background.png
 # Optionally, reload terminal and other applications that support pywal
 # Uncomment the line below if you want to reload terminal settings
 # wal -R
